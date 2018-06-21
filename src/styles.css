@@ -35,6 +35,10 @@ app-root {
   padding: 108px 0 0;
 }
 
+.center-container .mdl-card {
+  min-width: 500px;
+}
+
 .hero {
   display: flex;
   flex-direction: column;
