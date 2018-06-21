@@ -1,0 +1,9 @@
+<svg width="187px" height="200px" viewBox="0 0 187 200" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo">
+            <polygon id="Shape" fill="#DD0031" fill-rule="nonzero" points="93.1 0 93.1 0 93.1 0 0 33.2 14.2 156.3 93.1 200 93.1 200 93.1 200 172 156.3 186.2 33.2"></polygon>
+            <polygon id="Shape" fill="#C3002F" fill-rule="nonzero" points="93 0 93 22.2 93 22.1 93 123.4 93 123.4 93 200 93 200 171.9 156.3 186.1 33.2"></polygon>
+            <path d="M120,69.1666667 C113.611111,63.3333333 105.277778,60 96.1111111,60 C76.1111111,60 60,76.1111111 60,96.1111111 C60,116.111111 76.1111111,132.222222 96.1111111,132.222222 C105.277778,132.222222 113.611111,128.888889 120,123.055556" id="Shape" stroke="#FFFFFF" stroke-width="35" stroke-linecap="round" stroke-linejoin="round"></path>
+        </g>
+    </g>
+</svg>

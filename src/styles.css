@@ -1,1 +1,81 @@
 /* You can add global styles to this file, and also import other style files */
+
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #333;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+app-root {
+  display: block;
+}
+
+.background-sky {
+  background-color: #1976d2;
+  background: linear-gradient(145deg, #0d47a1, #42a5f5);
+  color: #fff;
+}
+
+.center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 900px;
+  min-height: 480px;
+  margin: 0 auto -32px;
+  padding: 108px 0 0;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  min-height: 480px;
+  height: 80vh;
+  max-height: 560px;
+  box-sizing: border-box;
+  padding: 48px 48px 32px;
+  overflow: hidden;
+  -webkit-transform: skewY(8deg);
+  transform: skewY(8deg);
+  -webkit-transform-origin: 100%;
+  transform-origin: 100%;
+}
+
+.creuna-logo {
+  z-index: 10;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 20px;
+  left: 20px;
+}
+
+.creuna-logo img {
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  -webkit-filter: drop-shadow(0 2px 2px rgba(10, 16, 20, 0.24));
+  filter: drop-shadow(0 2px 2px rgba(10, 16, 20, 0.24));
+}
+
+.creuna-headline {
+  font-size: 24px;
+  line-height: 1.4;
+  font-weight: 500;
+  margin-left: 15px;
+
+  color: #fff;
+}
