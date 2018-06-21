@@ -6,23 +6,9 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title: string = "Hello, frontenders";
-  isHappy: boolean = true;
-  numberOne: number = 45;
-  numberTwo: number = 1;
-
-  logo: string = "assets/logo.svg";
   name: string = "Poul";
 
-  handleBlur(event: any) {
-    this.name = event.target.value;
-  }
-
-  handleInput(event: any) {
-      this.name = event.target.value;
-  }
-
-  handleClick() {
-      this.name = "Holger";
+  handleChange(value: string) {
+    this.name = value;
   }
 }
