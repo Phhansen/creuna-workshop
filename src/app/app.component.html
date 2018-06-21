@@ -14,9 +14,44 @@
                             <input class="mdl-textfield__input" type="text" [value]="name" (input)="handleChange($event.target.value)" />
                         </div>
                     </div>
-                    <div class="mdl-cell mdl-cell--12-col">{{ name }}</div>
+                    <div class="mdl-cell mdl-cell--12-col" *ngIf="name.length">Searching for... {{ name }}</div>
+
+                    <ng-template [ngIf]="name.length">
+                        <div class="mdl-cell mdl-cell--12-col">Searching for... {{ name }}</div>
+                    </ng-template>
                 </div>
             </div>
+        </div>
+
+        <div class="mdl-card mdl-shadow--2dp">
+            <ul class="demo-list-two mdl-list">
+                <li class="mdl-list__item mdl-list__item--two-line" *ngFor="let player of players;">
+                    <span class="mdl-list__item-primary-content">
+                        <i class="material-icons mdl-list__item-avatar">person</i>
+                        <span>{{ player.name }}</span>
+                        <span class="mdl-list__item-sub-title">{{ player.matchesPlayed }} Matches played</span>
+                    </span>
+                    <span class="mdl-list__item-secondary-content" *ngIf="player.pro">
+                        <a class="mdl-list__item-secondary-action" href="#">
+                            <i class="material-icons">star</i>
+                        </a>
+                    </span>
+                </li>
+                <ng-template ngFor let-player [ngForOf]="players">
+                    <li class="mdl-list__item mdl-list__item--two-line">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-avatar">person</i>
+                            <span>{{ player.name }}</span>
+                            <span class="mdl-list__item-sub-title">{{ player.matchesPlayed }} Matches played</span>
+                        </span>
+                        <span class="mdl-list__item-secondary-content" *ngIf="player.pro">
+                            <a class="mdl-list__item-secondary-action" href="#">
+                                <i class="material-icons">star</i>
+                            </a>
+                        </span>
+                    </li>
+                </ng-template>
+            </ul>
         </div>
     </section>
 </header>

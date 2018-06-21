@@ -26,6 +26,7 @@ app-root {
 
 .center-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -37,6 +38,9 @@ app-root {
 
 .center-container .mdl-card {
   min-width: 500px;
+}
+.center-container .mdl-card + .mdl-card {
+  margin-top: 10px;
 }
 
 .hero {
