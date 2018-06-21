@@ -6,5 +6,8 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = "frontenders";
+  title: string = "frontenders";
+  isHappy: boolean = true;
+  numberOne: number = 45;
+  numberTwo: number = 1;
 }
