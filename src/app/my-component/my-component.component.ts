@@ -1,39 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Player } from "../models";
+
+import { PlayerService } from "../player.service";
 
 @Component({
   selector: 'my-component',
   templateUrl: './my-component.component.html'
 })
-export class MyComponentComponent {
+export class MyComponentComponent implements OnInit {
   name: string = "";
 
-  players: Player[] = [
-    {
-        id: 1,
-        name: "Stephen",
-        matchesPlayed: 134,
-        pro: true
-    },
-    {
-        id: 2,
-        name: "Roger",
-        matchesPlayed: 23,
-        pro: false
-    },
-    {
-        id: 3,
-        name: "Anthony",
-        matchesPlayed: 159,
-        pro: true
-    },
-    {
-        id: 4,
-        name: "Mark",
-        matchesPlayed: 12,
-        pro: false
-    },
-  ];
+  players: Player[] = [];
+
+  constructor(private service: PlayerService) {}
+
+  ngOnInit() {
+    this.service.getPlayers().subscribe(players => {
+      this.players = players;
+    });
+  }
 
   handleChange(value: string) {
     this.name = value;
