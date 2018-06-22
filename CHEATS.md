@@ -45,6 +45,7 @@ export class MyComponentComponent implements OnInit {
 
 ```
 ## Player service ( new file )
+place this file under the app folder as: `app/player.service.ts`
 
 *player.service.ts* 
 
