@@ -6,52 +6,44 @@
 
     <div class="background-sky hero"></div>
     <section class="center-container">
-        <div class="mdl-card mdl-shadow--2dp">
-            <div class="mdl-card__supporting-text">
-                <div class="mdl-grid">
-                    <div class="mdl-cell mdl-cell--12-col">
-                        <div class="mdl-textfield">
-                            <input class="mdl-textfield__input" type="text" [value]="name" (input)="handleChange($event.target.value)" />
-                        </div>
-                    </div>
-                    <div class="mdl-cell mdl-cell--12-col" *ngIf="name.length">Searching for... {{ name }}</div>
+        <div class="showcase">
+            <div class="showcase-section">
+                <button>change name</button>
+                <div>
+                    <input type="text" [value]="name" (input)="handleChange($event.target.value)" />
+
+                    <p *ngIf="name.length">Searching for... {{ name }}</p>
 
                     <ng-template [ngIf]="name.length">
-                        <div class="mdl-cell mdl-cell--12-col">Searching for... {{ name }}</div>
+                        <p>Searching for... {{ name }}</p>
                     </ng-template>
                 </div>
             </div>
-        </div>
 
-        <div class="mdl-card mdl-shadow--2dp">
-            <ul class="demo-list-two mdl-list">
-                <li class="mdl-list__item mdl-list__item--two-line" *ngFor="let player of players;">
-                    <span class="mdl-list__item-primary-content">
-                        <i class="material-icons mdl-list__item-avatar">person</i>
-                        <span>{{ player.name }}</span>
-                        <span class="mdl-list__item-sub-title">{{ player.matchesPlayed }} Matches played</span>
-                    </span>
-                    <span class="mdl-list__item-secondary-content" *ngIf="player.pro">
-                        <a class="mdl-list__item-secondary-action" href="#">
-                            <i class="material-icons">star</i>
-                        </a>
-                    </span>
-                </li>
-                <ng-template ngFor let-player [ngForOf]="players">
-                    <li class="mdl-list__item mdl-list__item--two-line">
-                        <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-avatar">person</i>
-                            <span>{{ player.name }}</span>
-                            <span class="mdl-list__item-sub-title">{{ player.matchesPlayed }} Matches played</span>
-                        </span>
-                        <span class="mdl-list__item-secondary-content" *ngIf="player.pro">
-                            <a class="mdl-list__item-secondary-action" href="#">
-                                <i class="material-icons">star</i>
-                            </a>
-                        </span>
+            <div class="showcase-section">
+                <ul class="demo-list">
+                    <li *ngFor="let player of players;">
+                        <div class="player-label">
+                            <p>{{ player.name }}</p>
+                            <span>{{ player.matchesPlayed }} Matches played</span>
+                        </div>
+                        <div class="player-status" *ngIf="player.pro">
+                            pro
+                        </div>
                     </li>
-                </ng-template>
-            </ul>
+                    <ng-template ngFor let-player [ngForOf]="players">
+                        <li>
+                            <div class="player-label">
+                                <p>{{ player.name }}</p>
+                                <span>{{ player.matchesPlayed }} Matches played</span>
+                            </div>
+                            <div class="player-status" *ngIf="player.pro">
+                                pro
+                            </div>
+                        </li>
+                    </ng-template>
+                </ul>
+            </div>
         </div>
     </section>
 </header>
