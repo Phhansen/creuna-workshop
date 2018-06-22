@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 
 // Mocking http calls
-import { InMemPlayerService } from "./in-memory-db-service.service";
+import { InMemPlayerService } from "./in-memory-data.service";
 
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
