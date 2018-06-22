@@ -134,6 +134,14 @@ button:hover,
   color: rgba(255,255,255,.7);
 }
 
+button.button-small {
+  min-width: auto;
+  height: 20px;
+  padding: 0 8px;
+  font-size: 12px;
+  line-height: 18px;
+}
+
 input[type="text"] {
   height: 38px;
   padding: 0 8px;
@@ -154,7 +162,8 @@ input[type="text"]:focus {
   padding: 0;
 }
 
-.demo-list > li {
+.demo-list > li,
+.player-detail {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -162,23 +171,37 @@ input[type="text"]:focus {
 
   border-bottom: 1px solid #eee;
 }
-.demo-list > li:last-child {
+.demo-list > li:last-child,
+.player-detail:last-child {
   border-bottom: none;
 }
 
-.demo-list > li .player-label {
+.demo-list > li .player-label,
+.player-detail .player-label {
   flex: 2;
 }
 
-.demo-list > li .player-label > p {
+.demo-list > li .player-label > p,
+.player-detail .player-label > p {
   margin-bottom: 0;
   font-weight: 600;
 }
 
-.demo-list > li .player-label > span {
+.demo-list > li .player-label > span,
+.player-detail .player-label > span {
   font-size: 12px;
 }
 
-.demo-list > li .player-status {
+.demo-list > li .player-status,
+.player-detail .player-status {
   flex: 0 1 auto;
+}
+
+.player-count {
+  display: block;
+  padding: 8px 0;
+}
+
+.player-count > h2 {
+  margin-bottom: 5px;
 }
