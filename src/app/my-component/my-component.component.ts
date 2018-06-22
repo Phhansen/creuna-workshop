@@ -1,11 +1,5 @@
 import { Component } from '@angular/core';
-
-interface Player {
-  id: number;
-  name: string;
-  matchesPlayed: number;
-  pro:  boolean;
-}
+import { Player } from "../models";
 
 @Component({
   selector: 'my-component',
@@ -43,5 +37,18 @@ export class MyComponentComponent {
 
   handleChange(value: string) {
     this.name = value;
+  }
+
+  levelUpPlayer(event: Player) {
+    this.players = this.players.map((player: Player) => {
+      if (player.id === event.id) {
+        player = {
+          ...player,
+          pro: true
+        }
+      }
+      return player;
+    });
+
   }
 }

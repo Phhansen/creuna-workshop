@@ -1,0 +1,8 @@
+<div class="player-label">
+  <p>{{ detail.name }}</p>
+  <span>{{ detail.matchesPlayed }} Matches played</span>
+</div>
+<div class="player-status" *ngIf="detail.pro">
+  pro
+</div>
+<button class="button-small" (click)="levelUpPlayer()">+</button>
