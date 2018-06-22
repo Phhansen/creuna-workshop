@@ -1,0 +1,12 @@
+<h2 [innerHTML]="title"></h2>
+<h2>{{ title + '!' }}</h2>
+<p>{{ numberOne + numberTwo }}</p>
+<p>{{ isHappy ? ":)" : ":(" }}</p>
+<div class="showcase-section">
+    <img [src]="logo">
+</div>
+<div class="showcase-section">
+  <button (click)="handleClick()">Change name</button>
+  <input type="text" [value]="name" (input)="handleInput($event)" (blur)="handleBlur($event)" />
+</div>
+<p>{{ name }}</p>
